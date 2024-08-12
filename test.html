@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Property Price Prediction</title>
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <nav class="navbar">
+        <div class="navbar-links">
+            <a class="nav-link" href="test.html">Predict</a>
+            <a class="nav-link" href="trend.html">Trends</a>
+            <a class="nav-link" href="login.html">Log Out</a>
+        </div>
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+          <img src="image1.jpeg" alt="Image 1">
+          <img src="image2.jpeg" alt="Image 2">
+          <img src="image3.jpeg" alt="Image 3">
+        </div>
+        <div class="gradient-overlay"></div>
+        <h1 style="color: white;">House Price Prediction Model</h1>
+      </div>
+    <form action="php.php" method="post">
+        <div class="input-container">
+            <div class="input-section">
+                <label for="location">Location:</label>
+                <select name="location" id="location" onchange="populatePrices()">
+                    <option value="Ibadan North">Ibadan North</option>
+                    <option value="Ibadan North East">Ibadan North East</option>
+                    <option value="Ibadan North West">Ibadan North West</option>
+                    <option value="Ibadan South East">Ibadan South East</option>
+                    <option value="Ibadan South West">Ibadan South West</option>
+                    <option value="Oshodi-Lagos">Oshodi-Lagos</option>
+                    <option value="Surulere-Lagos">Surulere-Lagos</option>
+                    <option value="Lekki-Lagos">Lekki-Lagos</option>
+                    <option value="Eti-Osa-Lagos">Eti-Osa-Lagos</option>
+                    <option value="Lagos-Island">Lagos-Island</option>
+                    <option value="Modomo-Osun">Modomo-Osun</option>
+                    <option value="Powerline-Osun">Powerline-Osun</option>
+                    <option value="Eleyele-Osun">Eleyele-Osun</option>
+                    <option value="Asherifa-Osun">Asherifa-Osun</option>
+                </select><br><br>
+            </div>
+            <div class="input-section">
+                <label for="size">Size:</label>
+                <select name="size" id="size" onchange="populatePrices()">
+                    <option value="Self Contain">Self Contain</option>
+                    <option value="1 Bedroom">1 Bedroom</option>
+                    <option value="2 Bedroom">2 Bedroom</option>
+                    <option value="3 Bedroom">3 Bedroom</option>
+                </select><br><br>
+            </div>
+            <div class="input-section">
+                <label for="furnished">Furnished:</label>
+                <select name="furnished" id="furnished" onchange="populatePrices()">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select><br><br>
+            </div>
+            <div class="input-section">
+                <label for="min_price">Min Price:</label>
+                <select name="min_price" id="min_price">
+                    <!-- Options will be populated by JavaScript -->
+                </select><br><br>
+            </div>
+            <div class="input-section">
+                <label for="max_price">Max Price:</label>
+                <select name="max_price" id="max_price">
+                    <!-- Options will be populated by JavaScript -->
+                </select><br><br>
+            </div>
+            <div class="input-section">
+                <input type="submit" value="Predict Price">
+            </div>
+        </div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

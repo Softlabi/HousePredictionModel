@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="1image.jpeg" alt="Image 1" class="visible">
+                <img src="12image.jpeg" alt="Image 2">
+                <img src="123image.jpeg" alt="Image 3">
+            </div>
+        </div>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="login-form" action="login.php" method="POST">
+                <div class="input-section">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-section">
+                    <label for="PASSWORD">Password</label>
+                    <input type="PASSWORD" id="PASSWORD" name="PASSWORD" required>
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Carousel functionality
+        var carousel = document.querySelector('.carousel');
+        var images = carousel.getElementsByTagName('img');
+        var currentIndex = 0;
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('visible');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('visible');
+        }
+
+        setInterval(showNextImage, 3000);
+    </script>
+</body>
+</html>

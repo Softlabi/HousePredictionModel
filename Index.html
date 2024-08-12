@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Input</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Input field container -->
+<div class="dropdown">
+    <!-- Input field with autocomplete -->
+    <input type="text" id="locationInput" class="location-input" placeholder="Enter Location">
+    
+    <!-- Dropdown content -->
+    <div id="locationDropdown" class="dropdown-content">
+        <a href="#" data-value="Ibadan">Ibadan</a>
+        <a href="#" data-value="Lagos">Lagos</a>
+        <a href="#" data-value="Osun">Osun</a>
+    </div>
+</div>
+
+<!-- Additional input section for Ibadan -->
+<div id="ibadanInputSection" class="dropdown" style="display: none;">
+    <!-- Input field with autocomplete -->
+    <select id="ibadanOptionDropdown" class="location-input">
+        <option value="">Select LGA</option>
+        <option value="Option 1">Akinyele</option>
+        <option value="Option 2">Egbeda</option>
+        <option value="Option 3">Ibadan North</option>
+        <option value="Option 4">Ibadan North East</option>
+        <option value="Option 5">Ibadan North West</option>
+        <option value="Option 6">Ibadan South East</option>
+        <option value="Option 7">Ibadan South West</option>
+        <option value="Option 8">Lagelu</option>
+        <option value="Option 9">Oluyole</option>
+        <option value="Option 10">Ido</option>
+        <option value="Option 11">ONA ARA</option>
+    </select>
+</div>
+
+<!-- Additional input section for Lagos -->
+<div id="lagosInputSection" class="dropdown" style="display: none;">
+    <!-- Input field with autocomplete -->
+    <select id="lagosOptionDropdown" class="location-input">
+        <option value="">Select LGA</option>
+        <option value="Option 1">Alimosho</option>
+        <option value="Option 2">Agege</option>
+        <option value="Option 3">Apapa</option>
+        <option value="Option 4">Badagry</option>
+        <option value="Option 5">Eti-Osa</option>
+        <option value="Option 6">Ikeja</option>
+        <option value="Option 7">Ibeju-Lekki</option>
+        <option value="Option 8">Oshodi-Isolo</option>
+        <option value="Option 9">Surulere</option>
+        <option value="Option 10">Somolu</option>
+        <option value="Option 11">Lagos Island</option>
+    </select>
+</div>
+
+<!-- Additional input section for Osun -->
+<div id="osunInputSection" class="dropdown" style="display: none;">
+    <!-- Input field with autocomplete -->
+    <select id="osunOptionDropdown" class="location-input">
+        <option value="">Select LGA</option>
+        <option value="Option 1">Ife</option>
+        <option value="Option 2">Ilesha</option>
+        <option value="Option 3">Boripe</option>
+    </select>
+</div>
+
+<!-- Dropdown for entering size -->
+<div class="size-dropdown-section" style="display: none;">
+    <select id="sizeDropdown" class="location-input">
+        <option value="">Select Size</option>
+        <option value="Small">Self Contain</option>
+        <option value="Medium">1 Bedroom</option>
+        <option value="Large">2 Bedroom</option>
+        <option value="Large">3 Bedroom</option>
+    </select>
+</div>
+
+<!-- Submit button -->
+<button id="submitButton">Submit</button>
+
+<!-- Link to the external JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
